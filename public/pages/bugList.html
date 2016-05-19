@@ -15,7 +15,17 @@
                     <h4>Bugs Per Cycle</h4>
                 </div>
 
+                
                 <div class="panel-body">
+                        
+                        <!-- Putting Search Box -->
+                        <form class="form-inline">
+                            <div class="form-group">
+                                <label> Search </label>
+                                <input type="text" ng-model="search" class="form-control" placeholder="search">
+                            </div>
+                        </form>
+
                         <table class="table table-responsive table-striped table-hover">
                             <thead>
                                 <tr>
@@ -34,7 +44,7 @@
                                     <td><button class="btn btn-success" ng-click="addBug()">Add Bugs</button></td>
 
                                 </tr>
-                                <tr ng-repeat="bug in bugListData">
+                                <tr ng-repeat="bug in bugListData|filter:search">
                                     <td>{{bug.cycle}}</td>
                                     <td>{{bug.bugs}}</td>
                                     <td>{{bug.status}}</td>
