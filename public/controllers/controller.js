@@ -1,6 +1,6 @@
 
 // Including ngRoute and tc.chartjs modules
-var myApp = angular.module('myModule',['tc.chartjs','ngRoute']);
+var myApp = angular.module('myModule',['tc.chartjs','ngRoute','angularUtils.directives.dirPagination']);
 
 
 

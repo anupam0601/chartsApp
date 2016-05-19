@@ -44,7 +44,8 @@
                                     <td><button class="btn btn-success" ng-click="addBug()">Add Bugs</button></td>
 
                                 </tr>
-                                <tr ng-repeat="bug in bugListData|filter:search">
+                                <!--tr ng-repeat="bug in bugListData|filter:search"-->
+                                    <tr dir-paginate="bug in bugListData|filter:search|itemsPerPage:9">
                                     <td>{{bug.cycle}}</td>
                                     <td>{{bug.bugs}}</td>
                                     <td>{{bug.status}}</td>
@@ -52,7 +53,12 @@
                                 </tr> 
                             </tbody>
                             
-                        </table>                    
+                        </table> 
+                        <dir-pagination-controls
+                            max-size="9"
+                            direction-links="true"
+                            boundary-links="true">
+                        </dir-pagination-controls>                   
                 </div>
             </div>
         </div>  
