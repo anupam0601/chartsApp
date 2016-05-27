@@ -61,8 +61,8 @@ app.get('/lineChartRoute', function(req,res){
 
 	//aggregate to push the data to arrays
 	buglist.aggregate({$group:{ _id: null,bugsArray : { $push :  "$bugs" },cycles : { $push : "$cycle" }}},function(err, docs){
-		console.log("line chart data ======>",docs[0].bugsArray);
-		console.log("line chart data ======>",docs[0].cycles);
+		console.log("line chart data bugs ======>",docs[0].bugsArray);
+		console.log("line chart data cycles======>",docs[0].cycles);
 		
 		//storing the arrays to a collective array and send it to angular 
 		var arr = [];

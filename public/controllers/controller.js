@@ -9,11 +9,17 @@ myApp.config(['$routeProvider',function($routeProvider) {
   $routeProvider
 
     // route for home page
+
+    .when('/',{
+      templateUrl : 'pages/home.html',
+      controller : 'mainController'
+    })
+    
     .when('/home',{
       templateUrl : 'pages/home.html',
       controller : 'mainController'
     })
-
+    
     // route for Charts page
     .when('/charts', {
       templateUrl : 'pages/charts.html',
